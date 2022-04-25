@@ -1,16 +1,6 @@
-function digital_root(n) {
-  var sNumero = n.toString();
-  var sum = 0;
-
-  for (i = 0; i < sNumero.length; i++) {
-    sum += parseInt(sNumero[i]);
-  }
-
-  if (sum > 9) {
-    return digital_root(sum);
-  }
-
-  return sum;
+function highAndLow(numbers) {
+  numbers = numbers.split(" ");
+  return Math.max(...numbers) + " " + Math.min(...numbers);
 }
 
-console.log(digital_root(789));
+highAndLow("31 553 6 2 211");
